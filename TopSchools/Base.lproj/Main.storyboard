@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GqL-Sl-qjL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Split View Controller-->
+        <scene sceneID="7l7-LE-e0g">
+            <objects>
+                <splitViewController id="GqL-Sl-qjL" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="Ygd-7l-iDA" kind="relationship" relationship="masterViewController" id="Bpf-eW-md9"/>
+                        <segue destination="aHx-AC-ZZf" kind="relationship" relationship="detailViewController" id="qfg-r6-FiF"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LMM-q5-eTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1185" y="144"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ImageViewController" customModule="TopSchools" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHy-Pj-J52">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="TeC-cF-a2m">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GHy-Pj-J52" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4qX-Zq-MHH"/>
+                            <constraint firstItem="GHy-Pj-J52" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DFR-cu-N3B"/>
+                            <constraint firstItem="TeC-cF-a2m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cMz-0v-r4m"/>
+                            <constraint firstItem="GHy-Pj-J52" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="pZn-M1-6Gp"/>
+                            <constraint firstItem="TeC-cF-a2m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qhP-dk-BJQ"/>
+                            <constraint firstAttribute="trailing" secondItem="GHy-Pj-J52" secondAttribute="trailing" id="xX1-K3-NDa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gFy-Jr-VRd"/>
+                    <connections>
+                        <outlet property="scrollView" destination="GHy-Pj-J52" id="CRk-aq-UJY"/>
+                        <outlet property="spinner" destination="TeC-cF-a2m" id="ph8-Q6-37j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1823.2" y="497.90104947526243"/>
+        </scene>
+        <!--School View Controller-->
+        <scene sceneID="Oto-hl-QIS">
+            <objects>
+                <viewController id="58O-LA-rl8" customClass="SchoolViewController" customModule="TopSchools" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8kA-Pi-fNI"/>
+                        <viewControllerLayoutGuide type="bottom" id="dTO-25-iQb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rEZ-hh-lbf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4N0-bS-7eI">
+                                <rect key="frame" x="112" y="243" width="150" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNN-5N-B5n">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Stanford"/>
+                                        <connections>
+                                            <action selector="showImageWithSender:" destination="58O-LA-rl8" eventType="touchUpInside" id="X02-tD-mkl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Th-aT-Bby">
+                                        <rect key="frame" x="0.0" y="60" width="150" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="MIT"/>
+                                        <connections>
+                                            <action selector="showImageWithSender:" destination="58O-LA-rl8" eventType="touchUpInside" id="Znz-OD-tMt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuZ-Zw-hfR">
+                                        <rect key="frame" x="0.0" y="120" width="150" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Harvard"/>
+                                        <connections>
+                                            <action selector="showImageWithSender:" destination="58O-LA-rl8" eventType="touchUpInside" id="geJ-8u-w00"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4N0-bS-7eI" firstAttribute="centerX" secondItem="rEZ-hh-lbf" secondAttribute="centerX" id="65z-DB-07o"/>
+                            <constraint firstItem="4N0-bS-7eI" firstAttribute="centerY" secondItem="rEZ-hh-lbf" secondAttribute="centerY" id="y8G-bT-ioH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="svB-BH-gIL"/>
+                    <connections>
+                        <segue destination="aHx-AC-ZZf" kind="showDetail" identifier="Show Image" id="MQC-tn-Iek"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ydh-YK-Rm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="-260.41979010494754"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I9v-WZ-12W">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ygd-7l-iDA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ge1-JM-DV4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="58O-LA-rl8" kind="relationship" relationship="rootViewController" id="Ahy-KJ-34H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AB7-dN-rUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55.200000000000003" y="-260.41979010494754"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="T6x-c4-61B">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aHx-AC-ZZf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="98A-7z-cHE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xpJ-hW-SE4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xBz-Qt-OnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="497.90104947526243"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="MQC-tn-Iek"/>
+    </inferredMetricsTieBreakers>
+</document>
